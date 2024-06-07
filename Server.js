@@ -46,20 +46,6 @@ app.post("/users", async (req, res) => {
   res.status(201).json(newUser);
 });
 
-// // Endpoint to authenticate user
-// app.post("/login", async (req, res) => {
-//   const { username, password } = req.body;
-//   const users = (await loadUsers()) || [];
-//   const user = users?.find(
-//     (u) => u.username === username && u.password === password
-//   );
-//   if (user) {
-//     res.json({ message: "Login successful", user });
-//   } else {
-//     res.status(401).json({ message: "Invalid credentials" });
-//   }
-// });
-
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
